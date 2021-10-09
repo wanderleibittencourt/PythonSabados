@@ -13,9 +13,17 @@ class Test(unittest.TestCase):
 
     def test_aprendendo_testar(self):
         assert 1 == 1
+
+    def test_string(self):
+        assert "1" == "1"
+
     def test_booleano_dois(self):
         a = "teste"
         assert bool(a)
+
+    def test_bolenaos(self):
+        assert True == True
+
 
     def test_varios_testes(self):
         a = "Teste"
@@ -29,10 +37,19 @@ class Test(unittest.TestCase):
         a = "Teste"
         b = "Teste"
         c = ""
-        assert a == b and a == c
+        assert a == b and a != c
+        #poderia por ! no lugarde == "a != c"
 
     def test_valor_inteiro(self):
         assert isinstance(1, int)
+        assert isinstance("Sou uma string", str)
+        assert isinstance(12.25, float)
+
+    def test_com_not (self):
+        a = "teste"
+        b = "teste"
+        c = ""
+        assert a == b and not c
 
 
 
